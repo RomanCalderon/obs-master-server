@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MasterServer</name>
+    </assembly>
+    <members>
+        <member name="M:MasterServer.Controllers.GameServerController.Create(MasterServer.Models.GameServer)">
+             <summary>
+             Creates a GameServer.
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /GameServer
+                 {
+                    "name": "Game Server",
+                    "ip": "123.123.1.2",
+                    "port": 12345,
+                    "clientSceneIndex": 0,
+                    "playerCount": 0,
+                    "maxPlayers": 0
+                 }
+            
+             </remarks>
+             <param name="gameServer">New GameServer object</param>
+             <returns>A newly created GameServer</returns>
+             <response code="201">Returns the newly created game server</response>
+             <response code="400">If the game server is null</response>            
+        </member>
+        <member name="M:MasterServer.Controllers.GameServerController.Delete(System.Int64)">
+            <summary>
+            Deletes a specific GameServer.
+            </summary>
+            <param name="id"></param>        
+        </member>
+    </members>
+</doc>

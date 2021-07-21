@@ -11,6 +11,7 @@ namespace MasterServer
 {
     public class Program
     {
+#pragma warning disable CS1591
         public static void Main ( string [] args )
         {
             CreateHostBuilder ( args ).Build ().Run ();
@@ -21,6 +22,8 @@ namespace MasterServer
                 .ConfigureWebHostDefaults ( webBuilder =>
                   {
                       webBuilder.UseStartup<Startup> ();
+                      webBuilder.UseUrls ( "http://0.0.0.0:44334", "https://0.0.0.0:44335" );
                   } );
+#pragma warning restore CS1591
     }
 }
